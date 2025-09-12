@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyDownloader</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #4caf50, #2e7d32);
+      color: white;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .download-buttons {
+      margin-top: 2rem;
+    }
+    .download-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 1rem 2rem;
+      background: white;
+      color: #2e7d32;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .download-buttons a:hover {
+      background: #ddd;
+      transform: translateY(-2px);
+    }
+    .highlight {
+      box-shadow: 0 0 15px rgba(76, 175, 80, 0.8);
+      border: 2px solid #4caf50;
+    }
+    .features {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .features h3 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .features ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+    .features li::before {
+      content: "✔";
+      margin-right: 0.5rem;
+      color: #2e7d32;
+    }
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    footer a {
+      color: #4caf50;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MyDownloader</h1>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="#community">Community</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Fast & Easy Downloads for Everyone</h2>
+    <p>The free, open-source download manager you can trust.</p>
+    <div class="download-buttons" id="download">
+      <a href="#" id="win">Download for Windows</a>
+      <a href="#" id="mac">Download for Mac</a>
+      <a href="#" id="linux">Download for Linux</a>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h3>Why Choose MyDownloader?</h3>
+    <ul>
+      <li>Pause and resume downloads anytime</li>
+      <li>Automatic extraction of archives</li>
+      <li>Multi-language support</li>
+      <li>Community-driven development</li>
+      <li>100% free and open source</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyDownloader Project | <a href="#">GitHub</a> | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    // Auto-detect OS and highlight the right download button
+    const userOS = navigator.platform.toLowerCase();
+    if (userOS.includes("win")) {
+      document.getElementById("win").classList.add("highlight");
+    } else if (userOS.includes("mac")) {
+      document.getElementById("mac").classList.add("highlight");
+    } else if (userOS.includes("linux")) {
+      document.getElementById("linux").classList.add("highlight");
+    }
+  </script>
+</body>
+</html>
